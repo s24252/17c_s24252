@@ -27,7 +27,6 @@ print(f"Squares of numbers from {start_num} to {end_num}: {result}")
 print("----------TASK 4----------")
 #TASK 4: Utilize the math library to calculate the square root of each number in the generated list from the previous task.
 import math
-
 class SquareGenerator:
     def generate_squares(self, start, end):
         squares = [x**2 for x in range(start, end + 1)]
@@ -70,7 +69,7 @@ print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
 print(f"Square roots of squares: {square_roots}")
 print("----------TASK 6----------")
 #TASK 6: Extract the SquareGenerator class into a separate module named square_generator.py
-from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 
 square_gen = SquareGenerator()
 start_num = 1
@@ -81,3 +80,16 @@ square_roots = square_gen.calculate_square_roots(squares)
 print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
 print(f"Square roots of squares: {square_roots}")
 
+#TASK 7: Transform the square_generator module into a package by adding an empty __init__.py file and organize it accordingly.
+print("----------TASK 7----------")
+
+from square_generator.square_generator import SquareGenerator
+
+square_gen = SquareGenerator()
+start_num = 1
+end_num = 10
+squares = square_gen.generate_squares(start_num, end_num)
+square_roots = square_gen.calculate_square_roots(squares)
+
+print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
+print(f"Square roots of squares: {square_roots}")
