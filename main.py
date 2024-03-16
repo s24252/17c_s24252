@@ -23,3 +23,23 @@ start_num = 1
 end_num = 10
 result = square_gen.generate_squares(start_num, end_num)
 print(f"Squares of numbers from {start_num} to {end_num}: {result}")
+#TASK 4: Utilize the math library to calculate the square root of each number in the generated list from the previous task.
+import math
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        squares = [x**2 for x in range(start, end + 1)]
+        return squares
+
+    def calculate_square_roots(self, numbers):
+        square_roots = [math.sqrt(num) for num in numbers]
+        return square_roots
+
+square_gen = SquareGenerator()
+start_num = 1
+end_num = 10
+squares = square_gen.generate_squares(start_num, end_num)
+square_roots = square_gen.calculate_square_roots(squares)
+
+print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
+print(f"Square roots of squares: {square_roots}")
