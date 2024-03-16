@@ -93,3 +93,25 @@ square_roots = square_gen.calculate_square_roots(squares)
 
 print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
 print(f"Square roots of squares: {square_roots}")
+#TASK 8: Create a subclass called CubicGenerator that inherits from the SquareGenerator class. Modify the CubicGenerator to generate cubes instead of squares.
+print("----------TASK 8----------")
+
+from square_generator.square_generator import SquareGenerator, CubicGenerator
+
+square_gen = SquareGenerator()
+start_num = 1
+end_num = 10
+squares = square_gen.generate_squares(start_num, end_num)
+square_roots = square_gen.calculate_square_roots(squares)
+
+print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
+print(f"Square roots of squares: {square_roots}")
+
+cubic_gen = CubicGenerator()
+start_num = 1
+end_num = 10
+cubes = cubic_gen.generate_cubes(start_num, end_num)
+cube_roots = cubic_gen.calculate_cube_roots(cubes)
+
+print(f"Cubes of numbers from {start_num} to {end_num}: {cubes}")
+print(f"Cube roots of cubes: {cube_roots}")
