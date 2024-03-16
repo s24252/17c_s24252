@@ -43,3 +43,26 @@ square_roots = square_gen.calculate_square_roots(squares)
 
 print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
 print(f"Square roots of squares: {square_roots}")
+#TASK 5: Handle the case where the end of the range is less than the start in the SquareGenerator class.
+import math
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        if end < start:
+            start, end = end, start
+        squares = [x**2 for x in range(start, end + 1)]
+        return squares
+
+    def calculate_square_roots(self, numbers):
+        square_roots = [math.sqrt(num) for num in numbers]
+        return square_roots
+
+square_gen = SquareGenerator()
+start_num = 1
+end_num = 10
+squares = square_gen.generate_squares(start_num, end_num)
+square_roots = square_gen.calculate_square_roots(squares)
+
+print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
+print(f"Square roots of squares: {square_roots}")
+
