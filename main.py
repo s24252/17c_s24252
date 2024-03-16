@@ -115,3 +115,19 @@ cube_roots = cubic_gen.calculate_cube_roots(cubes)
 
 print(f"Cubes of numbers from {start_num} to {end_num}: {cubes}")
 print(f"Cube roots of cubes: {cube_roots}")
+
+#TASK 9: Override the square generation method in the Cubic Generator class to generate squares
+# with a check to see if the start of the range is less than the end, if not return an Exceptions
+print("----------TASK 9----------")
+
+from square_generator.square_generator import CubicGenerator
+
+cubic_gen = CubicGenerator()
+start_num = 1
+end_num = 10
+
+try:
+    squares = cubic_gen.generate_squares(start_num, end_num)
+    print(f"Squares of numbers from {start_num} to {end_num}: {squares}")
+except ValueError as e:
+    print(f"Error: {e}")
